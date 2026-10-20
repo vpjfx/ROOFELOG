@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="RooferLog">
+<title>RooferLog</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--royal:#0A0A0A;--blue:#D90000;--ground:#F1F1F1;--line:#D4D4D4;--orange:#D90000;--navy:#FFFFFF;--yellow:#FF4D4D;--ink:#0A0A0A;--gray:#4B5563;--ok:#08813A;--bad:#B91C1C}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--ground);color:var(--ink);font:500 16px/1.35 'Barlow Semi Condensed',sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,button,.num{font-family:Oswald,sans-serif}
+header{background:var(--royal);color:#fff;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;border-bottom:4px solid var(--orange);display:flex;align-items:center;gap:8px}
+header .wm{font:700 20px Oswald,sans-serif;letter-spacing:2px;flex:1}
+header .wm b{color:#FF3B30}
+header button{background:none;border:0;color:#fff;font-size:14px;min-height:44px;padding:0 6px;letter-spacing:.4px}
+header .wm{min-width:0;white-space:nowrap}
+header #mode{font-size:11px;padding:2px 8px;flex:none}
+main{max-width:480px;margin:0 auto;padding:12px 16px 100px}
+#nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+#nav[hidden]{display:none}
+#nav{z-index:2000}
+.chip.bad{background:#FFC9C9;color:#7A0F0F}
+.leaflet-container{font:inherit}
+h2{font-family:Oswald,sans-serif}
+#nav button{flex:1;min-height:60px;border:0;border-top:3px solid transparent;border-radius:0;background:none;font-size:13px;font-weight:600;color:var(--gray);letter-spacing:.3px;padding:0 2px}
+#nav button[aria-current=true]{border-top-color:var(--orange);color:var(--ink);font-weight:700}
+h1{font-size:30px;line-height:1.1;margin:8px 0 12px;text-transform:uppercase;letter-spacing:1px}
+h2{font-size:18px;margin:16px 0 8px;letter-spacing:.4px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:10px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sub{color:var(--gray);font-size:14px}
+.chip{display:inline-block;border-radius:99px;padding:3px 10px;font-size:13px;font-weight:700;white-space:nowrap}
+.chip.blue{background:#0A0A0A;color:#FFFFFF}.chip.gray{background:#E5E7EB;color:#374151}.chip.ok{background:#B7F5CC;color:#064E3B}.chip.warn{background:#FFE08A;color:#6B3A00}
+.bar{height:8px;background:#E0E0E0;border-radius:4px;margin-top:6px}.bar i{display:block;height:8px;background:var(--blue);border-radius:4px}
+button{font-size:18px;font-weight:700;letter-spacing:.4px;min-height:52px;border-radius:12px;cursor:pointer}
+.btn{width:100%;border:0;background:var(--orange);color:var(--navy);margin-top:12px}
+.btn.out{background:#fff;border:2px solid var(--orange);color:#B00000}
+.btn:disabled{background:#D1D5DB;color:#374151;cursor:default}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+label{display:block;font-weight:700;margin-top:12px}
+input,select{width:100%;min-height:48px;margin-top:4px;padding:0 12px;border:1px solid #A3A3A3;border-radius:10px;font:600 16px 'Barlow Semi Condensed',sans-serif;background:#fff;color:var(--ink)}
+.secs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.secs button{min-height:48px;padding:0 14px;font-size:15px;border:2px solid #A3A3A3;background:#fff;color:#374151;border-radius:99px}
+.secs button[aria-pressed=true]{border-color:var(--orange);background:#FFDADA;color:#7A0000}
+.clockbar{background:#FFDADA;border-radius:14px;padding:12px 14px;margin-top:4px}
+.msg{margin-top:12px;padding:10px 12px;border-radius:10px;font-weight:700;background:#FFE08A;color:#6B3A00}
+.msg.ok{background:#B7F5CC;color:#064E3B}.msg.bad{background:#FFC9C9;color:#7A0F0F}
+.tabs{display:flex;gap:8px;margin-bottom:4px}.tabs button{flex:1;min-height:48px;font-size:15px;border:2px solid #A3A3A3;background:#fff;color:#374151}
+.tabs button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.num{font-size:22px;font-weight:700}
+.acts{display:flex;gap:10px;margin-top:10px}
+.acts .btn{flex:1;margin-top:0;min-height:48px;font-size:15px}
+a.btn{display:flex;align-items:center;justify-content:center;text-decoration:none;text-align:center;font-family:Oswald,sans-serif;font-weight:700;letter-spacing:.4px;border-radius:12px;padding:0 8px}
+.addr{font-weight:700;margin-top:4px;user-select:text;-webkit-user-select:text}
+.btn.sm{width:auto;min-height:44px;font-size:15px;padding:0 14px;margin-top:0}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.stat{background:#F1F1F1;border-radius:10px;padding:8px 10px}.stat b{display:block;font-size:17px}
+.hrs{display:flex;gap:8px;overflow-x:auto;margin-top:8px;padding-bottom:4px}
+.hr{flex:none;min-width:84px;background:#F1F1F1;border-radius:10px;padding:8px;text-align:center;font-size:14px}
+.toast{position:fixed;left:16px;right:16px;bottom:calc(76px + env(safe-area-inset-bottom));max-width:448px;margin:0 auto;background:#0A0A0A;color:#fff;padding:12px 14px;border-radius:12px;font-weight:700;z-index:3000}
+.toast[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.msg{animation:in .2s ease-out}@keyframes in{from{opacity:0;transform:translateY(-4px)}}}
+</style>
+</head>
+<body>
+<header>
+<svg width="44" height="44" viewBox="0 0 120 120" role="img" aria-label="Logo RooferLog: vikingo con martillo" style="flex:none"><circle cx="60" cy="60" r="56" fill="#0A0A0A" stroke="#E10600" stroke-width="4"/><g transform="rotate(-8 91 72)"><rect x="87.5" y="46" width="7" height="52" rx="3.5" fill="#E5E7EB"/><rect x="72" y="34" width="38" height="18" rx="3" fill="#D1D5DB" stroke="#0A0A0A" stroke-width="2"/><rect x="72" y="34" width="9" height="18" rx="3" fill="#E10600"/></g><g transform="translate(48 27) scale(.8) translate(-60 -24)"><path d="M38 46C26 44 22 32 26 24C32 34 40 36 46 38Z" fill="#F3F4F6"/><path d="M82 46C94 44 98 32 94 24C88 34 80 36 74 38Z" fill="#F3F4F6"/><path d="M36 56C36 36 48 28 60 28C72 28 84 36 84 56Z" fill="#9CA3AF"/><rect x="34" y="52" width="52" height="7" rx="2" fill="#E10600"/><path d="M40 59H80V72C80 80 72 84 60 84C48 84 40 80 40 72Z" fill="#FFE2C6"/><rect x="48" y="64" width="8" height="4" rx="2" fill="#0A0A0A"/><rect x="64" y="64" width="8" height="4" rx="2" fill="#0A0A0A"/><path d="M38 68C36 96 52 106 60 106C68 106 84 96 82 68C74 78 46 78 38 68Z" fill="#E10600"/></g></svg>
+<div class="wm">ROOFER<b>LOG</b></div>
+<span class="chip warn" id="mode" hidden>Modo de prueba</span>
+<button id="out" hidden>Salir</button>
+</header>
+<main id="app"></main>
+<nav id="nav" hidden aria-label="Secciones"></nav>
+<input type="file" id="cam" accept="image/*" capture="environment" hidden>
+<input type="file" id="rec" accept="image/*" capture="environment" hidden>
+<script>
+const API = () => localStorage.getItem('rl_api') || '';
+const MODE = () => localStorage.getItem('rl_mode') || (API() ? 'live' : '');
+const TABS = [['trabajos', 'Trabajos'], ['reloj', 'Reloj'], ['gastos', 'Gastos'], ['horas', 'Mis horas']];
+const CATS = ['Material', 'Combustible', 'Herramienta o equipo', 'Renta de equipo', 'Tirada de escombro', 'Estacionamiento o peaje', 'Comida', 'Otro'];
+const METODOS = ['Tarjeta de la empresa', 'Efectivo', 'Personal (reembolsable)'];
+const TIPOS = ['Reemplazo completo', 'Reparación', 'Instalación nueva', 'Limpieza de gutters', 'Instalación de ventilas', 'Inspección', 'Otro'];
+const ESTATUS = ['Pendiente', 'En proceso', 'Terminado', 'Cancelado'];
+const ATABS = [['panel', 'Panel'], ['casas', 'Trabajos'], ['equipo', 'Equipo'], ['usuarios', 'Usuarios'], ['ajustes', 'Ajustes']];
+const TAREAS_BASE = {
+  'Reemplazo completo': ['Quitar el techo viejo (tear-off)', 'Revisar y reparar la madera (deck)', 'Ice and water shield', 'Felt / underlayment', 'Drip edge y flashings', 'Instalar shingles', 'Ventilas', 'Gutters', 'Limpieza final y revisión del patio'],
+  'Reparación': ['Revisar el daño', 'Reparar o reemplazar el material dañado', 'Sellar flashings y penetraciones', 'Limpieza final'],
+  'Instalación nueva': ['Revisar la madera (deck)', 'Ice and water shield', 'Felt / underlayment', 'Drip edge y flashings', 'Instalar shingles', 'Ventilas', 'Limpieza final'],
+  'Limpieza de gutters': ['Limpiar los gutters', 'Revisar bajantes', 'Limpieza final'],
+  'Instalación de ventilas': ['Marcar y cortar', 'Instalar las ventilas', 'Sellar y flashing', 'Limpieza final'],
+  'Inspección': ['Revisar techo y flashings', 'Revisar gutters y ventilas', 'Tomar las fotos del estado'],
+  'Otro': ['Trabajo según las instrucciones', 'Limpieza final']
+};
+const isAdmin = () => !!S.user && S.user.rol !== 'Trabajador';
+const isSuper = () => !!S.user && S.user.rol === 'Super usuario';
+const hoy = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+const ahoraLocal = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+const ETAPAS = ['Antes','Tear-off','Madera expuesta (deck)','Ice and water shield','Felt / underlayment','Flashings y drip edge','Ventilas','Techo terminado','Gutters antes','Gutters después','Limpieza final','Problema / reparación'];
+const $ = s => document.querySelector(s);
+const S = { token: localStorage.getItem('rl_token'), user: JSON.parse(localStorage.getItem('rl_user') || 'null'), view: (localStorage.getItem('rl_mode') || localStorage.getItem('rl_api')) ? 'login' : 'setup', tab: 'trabajos', jobs: [], clock: null, job: null, sec: null, etapa: ETAPAS[0], dist: null, gps: '', hours: [], msg: null, busy: false, zona: null, ajustes: null, tipoPrev: '', g: {}, recibo: null, casas: [], casa: null, secs: [], team: [], secsFor: null, panel: null, eq: [], uList: [], pinFor: null, cl: null, man: {}, gastos: [], gtot: 0, map: null, avisos: [], ack: [], clima: {}, prueba: null };
+try { S.ack = JSON.parse(localStorage.getItem('rl_ack') || '[]'); } catch (e) { S.ack = []; }
+const esc = t => String(t ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const say = (t, k = '') => { S.msg = t ? { t, k } : null; };
+
+async function api(action, data = {}) {
+  if (MODE() === 'demo') return demoApi(action, data);
+  if (!API()) throw new Error('Falta conectar tu hoja de Google.');
+  let j;
+  try {
+    const r = await fetch(API(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action, token: S.token, ...data }) });
+    j = await r.json();
+  } catch (e) { throw new Error('Sin señal. Revisa tu internet e intenta otra vez.'); }
+  if (!j.ok && j.error === 'sesion') { logout(); throw new Error('La sesión terminó. Entra otra vez.'); }
+  return j;
+}
+function logout() { localStorage.removeItem('rl_token'); localStorage.removeItem('rl_user'); S.token = null; S.user = null; S.view = 'login'; }
+const meters = (a, b, c, d) => { const R = 6371000, r = Math.PI / 180, x = (c - a) * r, y = (d - b) * r, h = Math.sin(x / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin(y / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); };
+const getPos = () => new Promise((ok, no) => navigator.geolocation ? navigator.geolocation.getCurrentPosition(p => ok({ lat: p.coords.latitude, lng: p.coords.longitude, acc: p.coords.accuracy }), () => no(new Error('No pude ver tu ubicación. Activa el GPS y da permiso al navegador.')), { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }) : no(new Error('Este teléfono no permite ubicación.')));
+const elapsed = () => { if (!S.clock) return ''; const m = Math.max(0, Math.round((Date.now() - S.clock.entrada) / 60000)); return Math.floor(m / 60) + ' h ' + String(m % 60).padStart(2, '0') + ' min'; };
+const job = id => S.jobs.find(j => j.id === id);
+const pct = (a, b) => b ? Math.min(100, Math.round(100 * a / b)) : 0;
+
+// ----- Copiar la dirección y abrirla en el mapa -----
+const dirTexto = j => j.completa || [j.dir, j.ciudad, [j.estado, j.cp].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+const tieneXY = j => j.lat !== '' && j.lat != null && j.lng !== '' && j.lng != null && !isNaN(Number(j.lat)) && !isNaN(Number(j.lng));
+function navUrl(j) {
+  const q = tieneXY(j) ? Number(j.lat).toFixed(6) + ',' + Number(j.lng).toFixed(6) : dirTexto(j);
+  return /iPhone|iPad|iPod/.test(navigator.userAgent) ? 'https://maps.apple.com/?dirflg=d&daddr=' + encodeURIComponent(q)
+    : 'https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=' + encodeURIComponent(q);
+}
+const accionesDir = (j, id) => '<div class="acts"><button class="btn out" type="button" data-copy="' + esc(id) + '">Copiar dirección</button><a class="btn" href="' + esc(navUrl(j)) + '" target="_blank" rel="noopener">Cómo llegar</a></div>';
+const jobPorId = id => id === '__form' ? S.casa : (job(id) || S.casas.find(x => x.id === id));
+async function copiar(txt) {
+  try { if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(txt); return true; } } catch (e) { }
+  try { const a = document.createElement('textarea'); a.value = txt; a.setAttribute('readonly', ''); a.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(a); a.select(); a.setSelectionRange(0, 99999); const ok = document.execCommand('copy'); a.remove(); return ok; } catch (e) { return false; }
+}
+let toastT;
+function toast(t) {
+  let el = $('#toast');
+  if (!el) { el = document.createElement('div'); el.id = 'toast'; el.className = 'toast'; el.setAttribute('role', 'status'); document.body.appendChild(el); }
+  el.textContent = t; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { el.hidden = true; }, 3500);
+}
+// ----- Avisos de clima -----
+const SEG = { tormenta: 'Con rayos o tormenta, baja del techo y busca refugio.', granizo: 'Baja del techo y protege los vehículos y el material.', viento: 'Con viento fuerte, asegura herramientas y material y aléjate de los bordes.',
+  lluvia: 'Cubre el material y asegura lo que esté abierto antes de que empiece.', nieve: 'Con hielo el techo se pone resbaloso.', calor: 'Toma agua y descansa a la sombra.' };
+const CLIMA_ERR = { gps: 'Esta casa todavía no tiene ubicación en el mapa, así que no se puede consultar el clima.', cobertura: 'El servicio gratuito del clima solo cubre direcciones de EE. UU.',
+  servicio: 'No pude consultar el clima ahora. Intenta otra vez en unos minutos.', red: 'Sin señal. Revisa tu internet.', trabajo: 'No tienes acceso al clima de esta casa.', accion: 'Falta actualizar el servidor de Google (pega el Code.gs nuevo y crea una versión nueva).' };
+const avisoKey = a => a.t + '|' + a.trabajo + '|' + a.tipo;
+function setAvisos(list) {
+  list = Array.isArray(list) ? list : [];
+  const antes = (S.avisos || []).map(avisoKey), nuevo = list.some(a => antes.indexOf(avisoKey(a)) < 0 && S.ack.indexOf(avisoKey(a)) < 0);
+  S.avisos = list; return nuevo;
+}
+function avisosBanner() {
+  return (S.avisos || []).filter(a => S.ack.indexOf(avisoKey(a)) < 0).map(a => '<div class="msg ' + (a.nivel === 'alerta' ? 'bad' : '') + '" role="alert" style="margin-bottom:8px"><div class="row" style="align-items:flex-start"><div><b>' + esc(a.texto) + '</b><br>' + esc(a.dir) + ' · ' + esc(a.hora) + '</div>'
+    + '<button class="btn out sm" style="flex:none" data-ack="' + esc(avisoKey(a)) + '">Entendido</button></div>' + (SEG[a.tipo] ? '<div style="font-weight:600;margin-top:4px">' + esc(SEG[a.tipo]) + '</div>' : '') + '</div>').join('');
+}
+async function loadClima(id, forzar) {
+  const c = S.clima[id];
+  if (!id || (c && (c.cargando || (!forzar && c.data && Date.now() - c.t < 300000)))) return;
+  S.clima[id] = { cargando: true, t: Date.now() }; if (!S.busy) render();
+  try { const r = await api('clima', { trabajo: id }); S.clima[id] = r.ok ? { data: r, t: Date.now() } : { error: r.error, t: Date.now() }; }
+  catch (e) { S.clima[id] = { error: 'red', t: Date.now() }; }
+  if (!S.busy) render();
+}
+function climaCard(id) {
+  const c = S.clima[id];
+  let h = '<div class="card"><div class="row"><b>Clima</b><button class="btn out sm" data-clima="' + esc(id) + '"' + (c && c.cargando ? ' disabled' : '') + '>Actualizar</button></div>';
+  if (!c || c.cargando) return h + '<div class="sub">Consultando el clima…</div></div>';
+  if (c.error) return h + '<div class="sub">' + esc(CLIMA_ERR[c.error] || CLIMA_ERR.servicio) + '</div></div>';
+  const d = c.data, a = d.ahora;
+  if (a) h += '<div class="stats"><div class="stat"><span class="sub">Cielo</span><b>' + esc(a.cielo) + '</b></div><div class="stat"><span class="sub">Temperatura</span><b>' + esc(a.temp) + ' °F</b></div><div class="stat"><span class="sub">Viento</span><b>' + esc(a.viento) + ' mph</b></div><div class="stat"><span class="sub">Prob. de lluvia</span><b>' + esc(a.lluvia) + ' %</b></div></div>';
+  if ((d.proximas || []).length) h += '<div class="hrs" role="list" aria-label="Próximas horas">' + d.proximas.map(p => '<div class="hr" role="listitem"><b>' + esc(p.hora) + '</b><div>' + esc(p.cielo) + '</div><div class="sub">' + esc(p.lluvia) + ' % · ' + esc(p.viento) + ' mph</div></div>').join('') + '</div>';
+  (d.avisos || []).forEach(x => { h += '<div class="msg ' + (x.nivel === 'alerta' ? 'bad' : '') + '">' + esc(x.texto) + '</div>'; });
+  return h + '<div class="sub" style="margin-top:8px">Fuente: ' + esc(d.fuente) + ' · pronóstico por hora, actualizado ' + hm(c.t) + '. Es un aviso temprano, no una garantía: usa tu criterio en el techo.</div></div>';
+}
+function pruebaTxt(p) {
+  if (!p) return '';
+  const c = { enviado: 'Correo de prueba enviado a tu correo.', sin: 'Tu usuario no tiene correo en la hoja Usuarios (columna Correo): por eso no te llegan avisos por correo.', fallo: 'Google no dejó enviar el correo de prueba.', demo: 'Modo de prueba: no se manda ningún correo de verdad.' }[p.correo] || '';
+  const ok = p.servicio === 'ok' || p.servicio === 'demo';
+  const s = ok ? 'Servicio del clima conectado' + (p.dir ? ': ' + p.dir + (p.ahora ? ' · ' + p.ahora.cielo + ', ' + p.ahora.temp + ' °F' : '') : '.')
+    : ({ sin_casas: 'No hay casas pendientes con ubicación en el mapa para probar.', cobertura: 'Esa dirección está fuera de EE. UU.: el servicio gratuito no la cubre.', gps: 'La casa de prueba no tiene ubicación en el mapa.',
+      servicio: 'No pude conectar con el servicio del clima. Si es la primera vez, ejecuta autorizar() en Apps Script y crea una versión nueva.' }[p.servicio] || 'Respuesta inesperada.');
+  return '<div class="card"><b>Resultado de la prueba</b><div>' + esc(c) + '</div><div>' + esc(s) + '</div>' + (p.servicio === 'demo' ? '<div class="sub">Entra como <b>demo</b> para ver el aviso de prueba en la pantalla del trabajador.</div>' : '') + '</div>';
+}
+
+function demoState() {
+  return JSON.parse(localStorage.getItem('rl_demo') || 'null') || {
+    jobs: [{ id: 'T-001', dir: '123 Main St', ciudad: 'Ejemplo', estado: 'IL', cp: '', contratista: 'Contratista A', cliente: '', tipo: 'Reemplazo completo', estatus: 'En proceso', lat: '', lng: '', radio: 150, fecha: '', notas: 'Dejar el patio limpio.', personas: [], todos: true,
+      tareas: TAREAS_BASE['Reemplazo completo'].map(x => ({ tarea: x, hecha: false })), fotos: { antes: 0, despues: 0 } }],
+    clock: null, horas: [], gastos: [], eventos: [], zona: {}, avisos: [], ajustes: { zona: true, llega: true, termina: false, climaActivo: false, climaMin: 20, climaViento: 25, climaCuadrilla: true, climaOM: false },
+    users: [{ nombre: 'Dueño Demo', usuario: 'dueno', rol: 'Super usuario', activo: true }, { nombre: 'Trabajador Demo', usuario: 'demo', rol: 'Trabajador', activo: true }] };
+}
+const WK = 'Trabajador Demo';
+const dirDe = j => [j.dir, j.ciudad].filter(Boolean).join(', ');
+const r15 = ms => Math.round(ms / 900000) * 900000;
+const hm = ms => new Date(ms).toLocaleTimeString('es', { hour: 'numeric', minute: '2-digit' });
+const dm = ms => new Date(ms).toLocaleDateString('es', { day: '2-digit', month: '2-digit' });
+function demoApi(action, r) {
+  const d = demoState(), save = () => localStorage.setItem('rl_demo', JSON.stringify(d)), job0 = id => d.jobs.find(x => x.id === id);
+  d.avisos = d.avisos || []; d.ajustes = Object.assign({ zona: true, llega: true, termina: false, climaActivo: false, climaMin: 20, climaViento: 25, climaCuadrilla: true, climaOM: false }, d.ajustes);
+  const avisosDemo = () => d.avisos.filter(a => Date.now() - a.t < 90 * 60000);
+  const activo = j => j.estatus === 'Pendiente' || j.estatus === 'En proceso', visible = j => j.todos || j.personas.indexOf(WK) >= 0;
+  const reloj = () => d.clock ? [{ usuario: 'demo', nombre: WK, rol: 'Trabajador', dir: dirDe(job0(d.clock.trabajo)), desde: hm(d.clock.entrada), lat: d.clock.lat, lng: d.clock.lng, sin: Date.now() - d.clock.entrada > 14 * 3600000 }] : [];
+  const evento = (tipo, j) => { d.eventos.unshift({ t: Date.now(), hora: hm(Date.now()), tipo, nombre: WK, dir: dirDe(j) }); d.eventos = d.eventos.slice(0, 40); };
+  const cierra = (ms, extra) => { const a = d.clock.entrada, fa = r15(a), fb = r15(ms), j = job0(d.clock.trabajo); d.horas.push({ fecha: dm(a), dir: dirDe(j), entrada: hm(a), salida: hm(ms), entradaR: hm(fa), salidaR: hm(fb), horas: Math.max(0, (fb - fa) / 3600000), nota: extra || '' }); evento('termino', j); d.clock = null; };
+  if (action === 'login') {
+    const u = String(r.usuario).trim().toLowerCase();
+    if (r.pin !== '1234') return { ok: false, error: 'credenciales' };
+    if (u === 'demo') return { ok: true, token: 'demo', nombre: WK, rol: 'Trabajador', gastos: true };
+    if (u === 'dueno') return { ok: true, token: 'demo', nombre: 'Dueño Demo', rol: 'Super usuario', gastos: false };
+    return { ok: false, error: 'credenciales' };
+  }
+  if (action === 'trabajos') return { ok: true, clock: d.clock, jobs: d.jobs.filter(j => activo(j) && visible(j)).map(j => ({ id: j.id, dir: dirDe(j), tipo: j.tipo, estatus: j.estatus, lat: j.lat, lng: j.lng, radio: j.radio, fecha: j.fecha || '', notas: j.notas || '', tareas: j.tareas, fotos: j.fotos, completa: dirTexto(j) }))
+    .sort((a, b) => (a.fecha || '9') < (b.fecha || '9') ? -1 : (a.fecha || '9') > (b.fecha || '9') ? 1 : 0), avisos: avisosDemo() };
+  if (action === 'enZona') {
+    const j = job0(r.trabajo);
+    if (!j || !visible(j)) return { ok: false, error: 'trabajo' };
+    if (j.lat === '' || r.lat == null) return { ok: false, error: 'gps' };
+    const m = meters(r.lat, r.lng, j.lat, j.lng);
+    if (m > j.radio) return { ok: false, error: 'fuera', dist: Math.round(m) };
+    if (d.zona[j.id]) return { ok: true, nuevo: false };
+    d.zona[j.id] = true; evento('zona', j); save(); return { ok: true, nuevo: true };
+  }
+  if (action === 'clock') {
+    if (r.tipo === 'llegue') {
+      if (d.clock) return { ok: false, error: 'ya' };
+      const j = job0(r.trabajo);
+      if (j.lat === '' && r.lat != null) { j.lat = r.lat; j.lng = r.lng; }
+      else if (j.lat !== '' && r.lat != null) { const m = meters(r.lat, r.lng, j.lat, j.lng); if (m > j.radio) return { ok: false, error: 'fuera', dist: Math.round(m) }; }
+      d.clock = { trabajo: j.id, entrada: Date.now(), lat: r.lat == null ? null : r.lat, lng: r.lng == null ? null : r.lng }; evento('llego', j); save(); return { ok: true, entrada: d.clock.entrada };
+    }
+    if (!d.clock) return { ok: false, error: 'noclock' };
+    cierra(Date.now()); save(); return { ok: true };
+  }
+  if (action === 'foto') {
+    const j = job0(r.trabajo);
+    if (!j || (r.etapa !== 'Antes' && r.etapa !== 'Después')) return { ok: false, error: 'img' };
+    if (r.etapa === 'Antes') j.fotos.antes++; else j.fotos.despues++;
+    save(); return { ok: true };
+  }
+  if (action === 'tarea') { const j = job0(r.trabajo), t = j && j.tareas.find(x => x.tarea === r.tarea); if (!t) return { ok: false, error: 'tarea' }; t.hecha = !!r.hecha; save(); return { ok: true }; }
+  if (action === 'horas') return { ok: true, horas: d.horas };
+  if (action === 'horaManual') {
+    if (!String(r.motivo || '').trim()) return { ok: false, error: 'motivo' };
+    const [h1, m1] = String(r.entrada).split(':').map(Number), [h2, m2] = String(r.salida).split(':').map(Number), mins = (h2 * 60 + m2) - (h1 * 60 + m1);
+    if (!(mins > 0)) return { ok: false, error: 'hora' };
+    const j = job0(r.trabajo), f = String(r.fecha).split('-');
+    d.horas.push({ fecha: f[2] + '/' + f[1], dir: dirDe(j), entrada: r.entrada, salida: r.salida, entradaR: r.entrada, salidaR: r.salida, horas: Math.round(mins / 15) * 15 / 60, nota: 'Manual: ' + WK }); save(); return { ok: true };
+  }
+  if (action === 'gasto') { if (!(Number(r.monto) > 0)) return { ok: false, error: 'monto' }; d.gastos.push({ fecha: r.fecha || hoy(), categoria: r.categoria, descripcion: r.descripcion || '', monto: Number(r.monto) }); save(); return { ok: true }; }
+  if (action === 'gastos') { const l = d.gastos.map(g => ({ fecha: g.fecha.slice(8, 10) + '/' + g.fecha.slice(5, 7), categoria: g.categoria, descripcion: g.descripcion, monto: g.monto })); return { ok: true, gastos: l, total: l.reduce((a, g) => a + g.monto, 0) }; }
+  // ----- dueño -----
+  if (action === 'casas') return { ok: true, equipo: [WK], casas: d.jobs.map(j => ({ id: j.id, contratista: j.contratista, cliente: j.cliente, dir: j.dir, ciudad: j.ciudad, estado: j.estado, cp: j.cp, lat: j.lat, lng: j.lng, radio: j.radio, tipo: j.tipo, estatus: j.estatus, fecha: j.fecha || '', notas: j.notas || '', personas: j.personas, todos: j.todos, tareas: j.tareas })) };
+  if (action === 'guardarCasa') {
+    if (!String(r.dir || '').trim()) return { ok: false, error: 'dir' };
+    const vac = v => v === '' || v == null, la = vac(r.lat) ? '' : Number(r.lat), ln = vac(r.lng) ? '' : Number(r.lng);
+    if ((la !== '' && (isNaN(la) || Math.abs(la) > 90)) || (ln !== '' && (isNaN(ln) || Math.abs(ln) > 180)) || ((la === '') !== (ln === ''))) return { ok: false, error: 'coords' };
+    let j = r.id && job0(r.id);
+    if (!j) { const max = d.jobs.reduce((a, x) => Math.max(a, Number(String(x.id).slice(2)) || 0), 0); j = { id: 'T-' + String(max + 1).padStart(3, '0'), tareas: [], fotos: { antes: 0, despues: 0 }, personas: [], todos: false }; d.jobs.push(j); }
+    const previas = j.tareas || [];
+    Object.assign(j, { dir: r.dir.trim(), ciudad: r.ciudad || '', estado: String(r.estado || '').toUpperCase(), cp: r.cp || '', contratista: r.contratista || '', cliente: r.cliente || '', tipo: r.tipo || '', estatus: r.estatus || 'Pendiente', lat: la, lng: ln,
+      radio: Math.min(1000, Math.max(30, Number(r.radio) || 150)), fecha: r.fecha || '', notas: r.notas || '', personas: (r.personas || []).filter(String), todos: !!r.todos });
+    if (Array.isArray(r.tareas)) j.tareas = r.tareas.map(x => String(x).trim()).filter(Boolean).map(x => { const p = previas.find(y => y.tarea === x); return { tarea: x, hecha: p ? p.hecha : false }; });
+    save(); return { ok: true, id: j.id, ubicacion: la === '' ? 'sin' : 'manual', lat: la, lng: ln };
+  }
+  if (action === 'buscarDireccion') return { ok: false, error: 'servicio' };
+  if (action === 'ubicarFaltantes') return { ok: false, error: 'demo' };
+  if (action === 'panel') { const R = reloj(); return { ok: true, relojes: R, alertas: R.filter(x => x.sin), total: 1, eventos: d.eventos, avisos: avisosDemo(), jobs: d.jobs.filter(j => activo(j) && j.lat !== '').map(j => ({ id: j.id, dir: dirDe(j), lat: j.lat, lng: j.lng, radio: j.radio })) }; }
+  if (action === 'equipo') { const R = reloj()[0]; return { ok: true, equipo: [{ nombre: WK, usuario: 'demo', rol: 'Trabajador', reloj: R ? { dir: R.dir, desde: R.desde } : null, sin: R ? R.sin : false }] }; }
+  if (action === 'cerrarReloj') {
+    if (!d.clock) return { ok: false, error: 'noclock' };
+    if (!String(r.motivo || '').trim()) return { ok: false, error: 'motivo' };
+    if (!(Number(r.salida) > d.clock.entrada)) return { ok: false, error: 'hora' };
+    cierra(Number(r.salida), 'Cerrada por Dueño Demo'); save(); return { ok: true };
+  }
+  if (action === 'ajustes') return { ok: true, ajustes: d.ajustes };
+  if (action === 'guardarAjustes') {
+    const llave = typeof r.omKey === 'string' ? r.omKey.trim() : '';
+    if (llave && !/^[A-Za-z0-9_-]{8,100}$/.test(llave)) return { ok: false, error: 'llave' };
+    ['zona', 'llega', 'termina', 'climaActivo', 'climaCuadrilla'].forEach(k => { if (r[k] !== undefined) d.ajustes[k] = !!r[k]; });
+    if (r.climaMin !== undefined) d.ajustes.climaMin = Number(r.climaMin) === 15 ? 15 : 20;
+    if (r.climaViento !== undefined) d.ajustes.climaViento = [20, 25, 30].indexOf(Number(r.climaViento)) >= 0 ? Number(r.climaViento) : 25;
+    if (r.omQuitar) d.ajustes.climaOM = false; else if (llave) d.ajustes.climaOM = true;
+    save(); return { ok: true, ajustes: d.ajustes };
+  }
+  if (action === 'avisos') return { ok: true, avisos: avisosDemo() };
+  if (action === 'clima') {
+    const j = job0(r.trabajo); if (!j) return { ok: false, error: 'trabajo' };
+    const llueve = avisosDemo().length > 0, h0 = new Date(); h0.setMinutes(0, 0, 0);
+    const cielos = llueve ? ['Nublado', 'Lluvia', 'Lluvia', 'Nublado', 'Parcialmente nublado', 'Despejado'] : ['Nublado', 'Nublado', 'Parcialmente nublado', 'Parcialmente nublado', 'Despejado', 'Despejado'];
+    const pops = llueve ? [20, 70, 80, 30, 10, 5] : [20, 15, 10, 5, 5, 0];
+    const proximas = cielos.map((c, i) => ({ hora: hm(h0.getTime() + i * 3600000), cielo: c, temp: 58 + i, lluvia: pops[i], viento: 12 }));
+    return { ok: true, t: Date.now(), fuente: 'Demostración (datos de ejemplo)', ahora: { cielo: proximas[0].cielo, temp: 58, viento: 12, lluvia: pops[0] }, proximas, avisos: llueve ? [{ tipo: 'lluvia', texto: 'Lluvia probable (70 %)', nivel: 'aviso', fuente: 'Demostración' }] : [] };
+  }
+  if (action === 'probarClima') {
+    const j = d.jobs.find(activo) || d.jobs[0];
+    if (j) { d.avisos.unshift({ t: Date.now(), hora: hm(Date.now()), trabajo: j.id, dir: dirDe(j), tipo: 'lluvia', texto: 'Lluvia probable (70 %) · aviso de prueba', nivel: 'aviso' }); d.avisos = d.avisos.slice(0, 20); }
+    save(); return { ok: true, correo: 'demo', servicio: 'demo', dir: j ? dirDe(j) : '', ahora: { cielo: 'Nublado', temp: 58, viento: 12, lluvia: 20 }, fuente: 'Demostración' };
+  }
+  if (action === 'usuarios') return { ok: true, usuarios: d.users };
+  if (action === 'crearUsuario') {
+    const us = String(r.usuario || '').trim().toLowerCase();
+    if (!String(r.nombre || '').trim() || !/^[a-z0-9._-]{3,30}$/.test(us)) return { ok: false, error: 'datos' };
+    if (!/^\d{6}$/.test(String(r.pin || ''))) return { ok: false, error: 'pin' };
+    if (d.users.some(x => x.usuario === us)) return { ok: false, error: 'repetido' };
+    d.users.push({ nombre: r.nombre.trim(), usuario: us, rol: r.rol, activo: true }); save(); return { ok: true };
+  }
+  if (action === 'nuevoPin') return /^\d{6}$/.test(String(r.pin || '')) ? { ok: true } : { ok: false, error: 'pin' };
+  return { ok: false, error: 'accion' };
+}
+async function loadPanel() { const j = await api('panel'); if (!j.ok) throw new Error('No pude cargar el panel.'); S.panel = j; S.avisos = j.avisos || []; S.view = 'home'; }
+async function loadCasas() { const j = await api('casas'); if (!j.ok) throw new Error('No pude cargar los trabajos.'); S.casas = j.casas; S.team = j.equipo || []; }
+async function loadEquipo() { const j = await api('equipo'); if (!j.ok) throw new Error('No pude cargar el equipo.'); S.eq = j.equipo; }
+async function loadUsuarios() { const j = await api('usuarios'); if (!j.ok) throw new Error('Solo el super usuario ve esta lista.'); S.uList = j.usuarios; }
+async function loadAjustes() { const j = await api('ajustes'); if (!j.ok) throw new Error('Solo el super usuario ve los ajustes.'); S.ajustes = j.ajustes; }
+async function loadGastos() { const j = await api('gastos'); if (j.ok) { S.gastos = j.gastos || []; S.gtot = j.total || 0; } if (!S.jobs.length) await loadJobs(); }
+let leafletP;
+const loadMap = () => leafletP || (leafletP = new Promise((ok, no) => {
+  if (window.L) return ok(window.L);
+  const c = document.createElement('link'); c.rel = 'stylesheet'; c.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'; document.head.appendChild(c);
+  const s = document.createElement('script'); s.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
+  s.onload = () => ok(window.L); s.onerror = () => { leafletP = null; no(new Error('No pude cargar el mapa. Revisa tu internet.')); }; document.head.appendChild(s);
+}));
+function baseMap(L, el, center, zoom) {
+  if (S.map) { try { S.map.remove(); } catch (e) {} }
+  const m = S.map = L.map(el).setView(center, zoom);
+  const calle = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' });
+  const sat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { maxZoom: 19, attribution: 'Imágenes © Esri' });
+  sat.addTo(m); L.control.layers({ 'Satélite': sat, 'Calle': calle }).addTo(m);
+  return m;
+}
+async function initPanelMap() {
+  if (!$('#map')) return;
+  try {
+    const L = await loadMap(); if (!$('#map') || !S.panel) return;
+    const m = baseMap(L, $('#map'), [39.5, -98.35], 4), pts = [];
+    S.panel.jobs.forEach(j => { L.circle([j.lat, j.lng], { radius: j.radio, color: '#D90000', weight: 2, fillOpacity: .15 }).bindTooltip(j.dir).addTo(m); pts.push([j.lat, j.lng]); });
+    S.panel.relojes.forEach(r => { if (r.lat != null) { L.circleMarker([r.lat, r.lng], { radius: 8, color: '#0A0A0A', fillColor: '#08813A', fillOpacity: 1 }).bindTooltip(r.nombre).addTo(m); pts.push([r.lat, r.lng]); } });
+    if (pts.length) m.fitBounds(pts, { padding: [30, 30], maxZoom: 17 });
+  } catch (e) { if ($('#mapmsg')) $('#mapmsg').textContent = e.message; }
+}
+async function initCasaMap() {
+  if (!$('#map')) return;
+  try {
+    const L = await loadMap(); if (!$('#map') || !S.casa) return;
+    const c = S.casa, has = c.lat !== '' && c.lat != null && !isNaN(Number(c.lat)) && c.lng !== '' && !isNaN(Number(c.lng));
+    const m = baseMap(L, $('#map'), has ? [Number(c.lat), Number(c.lng)] : [39.5, -98.35], has ? 18 : 4);
+    S.mk = L.marker(has ? [Number(c.lat), Number(c.lng)] : [0, 0], { draggable: true });
+    S.ci = L.circle(has ? [Number(c.lat), Number(c.lng)] : [0, 0], { radius: Number(c.radio) || 150, color: '#D90000', weight: 2, fillOpacity: .15 });
+    if (has) { S.mk.addTo(m); S.ci.addTo(m); }
+    S.put = (ll, deEntrada, busq) => {
+      c.lat = +Number(ll.lat).toFixed(6); c.lng = +Number(ll.lng).toFixed(6);
+      if (!busq) c.manual = true;
+      if (!m.hasLayer(S.mk)) { S.mk.addTo(m); S.ci.addTo(m); }
+      S.mk.setLatLng(ll); S.ci.setLatLng(ll);
+      if (busq) m.setView(ll, Math.max(m.getZoom(), 18));
+      if (!deEntrada) { $('#casa_lat').value = c.lat; $('#casa_lng').value = c.lng; }
+    };
+    m.on('click', e => S.put(e.latlng)); S.mk.on('dragend', () => S.put(S.mk.getLatLng()));
+  } catch (e) { if ($('#mapmsg')) $('#mapmsg').textContent = e.message + ' Puedes escribir la latitud y la longitud a mano.'; }
+}
+// ----- Buscar la casa en Google Maps (con respaldo de OpenStreetMap) -----
+function consultaCasa(c) {
+  const dir = String(c.dir || '').trim(), ciudad = String(c.ciudad || '').trim(), cp = String(c.cp || '').trim();
+  if (dir.length < 5 || !/\d/.test(dir)) return '';
+  if (!(ciudad.length >= 2 || /^\d{5}/.test(cp) || dir.indexOf(',') >= 0)) return '';
+  return [dir, ciudad, String(c.estado || '').trim().toUpperCase(), cp].filter(Boolean).join(', ');
+}
+async function osmBuscar(q) {
+  const r = await (await fetch('https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&accept-language=es,en&q=' + encodeURIComponent(q))).json();
+  return r.map(x => { const a = x.address || {}, iso = String(a['ISO3166-2-lvl4'] || '');
+    return { dir: [a.house_number, a.road].filter(Boolean).join(' ') || String(x.display_name).split(',')[0], ciudad: a.city || a.town || a.village || a.hamlet || a.suburb || '', estado: iso.indexOf('US-') === 0 ? iso.slice(3) : '',
+      cp: a.postcode || '', lat: +Number(x.lat).toFixed(6), lng: +Number(x.lon).toFixed(6), completa: x.display_name, preciso: !!a.house_number, fuente: 'OpenStreetMap' }; });
+}
+function sugHTML() {
+  const b = S.bus; if (!b) return '';
+  if (b.cargando) return '<div class="sub" style="margin-top:8px" role="status">Buscando la casa en el mapa…</div>';
+  if (b.err) return '<div class="msg" role="status">' + esc(b.err) + '</div>';
+  const fu = esc(b.fuente || 'Google Maps');
+  if (!b.res.length) return '<div class="msg" role="status">No encontré esa dirección en ' + fu + '. Revisa el texto o toca el mapa para marcar la casa.</div>';
+  const a = b.aplicada != null ? b.res[b.aplicada] : null;
+  if (a) {
+    const c = S.casa, igual = a.dir === c.dir && (a.ciudad || '') === (c.ciudad || '') && (a.estado || '') === (c.estado || '') && (a.cp || '') === (c.cp || '');
+    return '<div class="msg ok" role="status">Casa encontrada en ' + fu + ': ' + esc(a.completa) + '. El punto ya está en el mapa; arrástralo si hace falta.</div>'
+      + (igual ? '' : '<button class="btn out" type="button" style="min-height:44px;font-size:15px" data-sug="' + b.aplicada + '">Escribir la dirección como la tiene ' + fu + '</button>');
+  }
+  return '<div class="sub" style="margin-top:8px">¿Cuál es la casa? Toca una opción (' + fu + '):</div>'
+    + b.res.map((m, i) => '<button class="btn out" type="button" style="min-height:48px;font-size:15px;text-align:left;letter-spacing:0" data-sug="' + i + '">' + esc(m.completa) + (m.preciso ? '' : ' (aproximada)') + '</button>').join('');
+}
+const pintaSug = () => { const el = $('#sug'); if (el) el.innerHTML = sugHTML(); };
+function aplicarResultado(m, completo) {
+  const c = S.casa;
+  const set = (k, v) => { c[k] = v; const el = $('#casa_' + k); if (el) el.value = v; };
+  if (completo) { set('dir', m.dir); set('ciudad', m.ciudad || c.ciudad || ''); set('estado', m.estado || c.estado || ''); set('cp', m.cp || c.cp || ''); }
+  else { if (!c.ciudad && m.ciudad) set('ciudad', m.ciudad); if (!c.estado && m.estado) set('estado', m.estado); if (!c.cp && m.cp) set('cp', m.cp); }
+  if (S.put && S.map && $('#map')) S.put({ lat: m.lat, lng: m.lng }, false, true);
+  else { c.lat = m.lat; c.lng = m.lng; if ($('#casa_lat')) $('#casa_lat').value = m.lat; if ($('#casa_lng')) $('#casa_lng').value = m.lng; }
+  c.manual = false;
+}
+let busT;
+const buscarAuto = () => { clearTimeout(busT); busT = setTimeout(() => { buscarCasa(true); }, 900); };
+async function buscarCasa(auto) {
+  const c = S.casa; if (!c) return;
+  if (auto && c.manual) return;
+  const q = consultaCasa(c);
+  if (!q) { S.bus = auto ? null : { err: 'Escribe la calle con número y la ciudad (o el código postal) para buscar la casa.' }; pintaSug(); return; }
+  if (auto && S.bus && S.bus.q === q && !S.bus.err) return;
+  const seq = S.busSeq = (S.busSeq || 0) + 1;
+  S.bus = { q, cargando: true }; pintaSug();
+  let res = [], fuente = 'Google Maps', err = '', r;
+  try { r = await api('buscarDireccion', { q }); } catch (e) { r = { ok: false, error: 'red' }; }
+  if (!S.token) return render();
+  if (r.ok) res = r.resultados || [];
+  else if (r.error === 'permiso') err = 'Solo el supervisor o el super usuario puede buscar direcciones.';
+  else { try { res = await osmBuscar(q); fuente = 'OpenStreetMap'; } catch (e) { err = 'No pude buscar la dirección. Revisa tu internet o toca el mapa para marcar la casa.'; } }
+  if (seq !== S.busSeq || S.casa !== c) return;
+  S.bus = { q, res, fuente, err };
+  if (!err && res.length === 1 && res[0].preciso) { aplicarResultado(res[0], !auto); S.bus.aplicada = 0; }
+  pintaSug();
+}
+function afterRender() {
+  if (S.busy || !isAdmin() || S.view === 'login' || S.view === 'setup') return;
+  if (S.tab === 'panel' && S.panel) initPanelMap();
+  if (S.tab === 'casas' && S.casa) initCasaMap();
+}
+const back = (t) => '<button class="btn out" style="min-height:44px;font-size:15px;margin:0 0 8px" data-cancel>‹ ' + t + '</button>';
+const txtEv = t => ({ zona: 'ya está en la zona de', llego: 'marcó Llegué en', termino: 'terminó el día en' }[t] || t);
+const fechaTxt = iso => iso ? new Date(iso).toLocaleString('es', { weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }) : '';
+function vPanel() {
+  const p = S.panel;
+  if (!p) return '<h1>Panel</h1><div class="card">Cargando…</div>';
+  let h = '<h1>Panel del día</h1><div class="row" style="gap:10px"><div class="card" style="flex:1"><div class="sub">En reloj</div><div class="num">' + p.relojes.length + ' de ' + p.total + '</div></div><div class="card" style="flex:1"><div class="sub">Alertas</div><div class="num" style="color:var(--bad)">' + p.alertas.length + '</div></div></div>';
+  p.alertas.forEach(a => { h += '<div class="msg bad">' + esc(a.nombre) + ' · sin salida desde ' + esc(a.desde) + ' · ' + esc(a.dir) + '</div>'; });
+  h += '<h2>Avisos de hoy</h2>';
+  if (!(p.eventos || []).length) h += '<div class="card">Todavía no hay avisos. Aparecen cuando alguien llega a una casa.</div>';
+  (p.eventos || []).slice(0, 8).forEach(e => { h += '<div class="card"><b>' + esc(e.nombre) + '</b> ' + esc(txtEv(e.tipo)) + ' ' + esc(e.dir) + '<div class="sub">' + esc(e.hora) + '</div></div>'; });
+  h += '<h2>Mapa</h2><div class="card" style="padding:8px"><div id="map" style="height:280px;border-radius:10px" role="img" aria-label="Mapa de las casas y de las personas en reloj"></div><div class="sub" id="mapmsg">Los círculos son las geocercas; los puntos verdes, donde marcó Llegué cada persona.</div></div><h2>En reloj</h2>';
+  if (!p.relojes.length) h += '<div class="card">Nadie está en reloj ahora.</div>';
+  p.relojes.forEach(r => { h += '<div class="card"><div class="row"><b>' + esc(r.nombre) + '</b><span class="chip ' + (r.sin ? 'bad' : 'ok') + '">' + (r.sin ? 'Sin salida' : 'En reloj') + '</span></div><div class="sub">' + esc(r.dir) + ' · desde ' + esc(r.desde) + '</div></div>'; });
+  return h;
+}
+function vCasas() {
+  let h = '<h1>Trabajos</h1><p class="sub">Aquí capturas las direcciones a mano. Cuando eliges personas y guardas, la cuadrilla ya la tiene lista en su app.</p><button class="btn" data-newcasa>Nuevo trabajo</button>';
+  const sinMapa = S.casas.filter(c => (c.estatus === 'Pendiente' || c.estatus === 'En proceso') && !tieneXY(c)).length;
+  if (sinMapa) h += '<div class="card"><b>' + sinMapa + (sinMapa === 1 ? ' casa sin ubicación en el mapa' : ' casas sin ubicación en el mapa') + '</b><div class="sub">Sin ella no se valida el Llegué ni se revisa el clima. La app puede buscarlas sola en Google Maps.</div><button class="btn out" type="button" data-ubicar>Ubicar las casas en Google Maps</button></div>';
+  if (!S.casas.length) h += '<div class="card">Todavía no hay trabajos. Crea el primero.</div>';
+  S.casas.forEach(c => {
+    const quien = c.todos ? 'Toda la cuadrilla' : (c.personas || []).length ? (c.personas || []).join(', ') : '';
+    h += '<button class="card" style="width:100%;text-align:left;font:inherit;min-height:0" data-casa="' + esc(c.id) + '"><div class="row"><b style="font:700 19px Oswald,sans-serif">' + esc(c.dir) + '</b>' + chipFor(c.estatus) + '</div><div class="sub">' + esc([c.fecha ? fechaTxt(c.fecha) : '', c.contratista, c.tipo].filter(Boolean).join(' · ')) + '</div>'
+      + '<div class="sub">' + (quien ? esc(quien) : '<b>Sin personas: la cuadrilla aún no la ve</b>') + ' · ' + (c.lat === '' || c.lat == null ? 'sin ubicación en el mapa' : 'geocerca de ' + c.radio + ' m') + '</div></button>';
+  });
+  return h;
+}
+function vCasaForm() {
+  const c = S.casa, v = k => esc(c[k] == null ? '' : c[k]), sel = (arr, k) => arr.map(x => '<option' + (c[k] === x ? ' selected' : '') + '>' + esc(x) + '</option>').join('');
+  const f = (id, label, extra) => '<label for="casa_' + id + '">' + label + '</label><input id="casa_' + id + '" data-f="casa" value="' + v(id) + '" ' + (extra || '') + '>';
+  const quien = c.todos || c.personas.length;
+  let h = back('Trabajos') + '<h1>' + (c.id ? esc(c.id) : 'Nuevo trabajo') + '</h1><form id="casaf" class="card"><b>Dirección</b>' + f('dir', 'Calle y número', 'required autocomplete="street-address"')
+    + '<div class="acts"><button class="btn out" type="button" data-copy="__form">Copiar dirección</button><button class="btn out" type="button" data-nav="__form">Abrir en el mapa</button></div>'
+    + '<div class="row" style="gap:8px;align-items:flex-end"><div style="flex:2">' + f('ciudad', 'Ciudad') + '</div><div style="flex:1">' + f('estado', 'Estado', 'maxlength="2"') + '</div><div style="flex:1">' + f('cp', 'CP', 'inputmode="numeric"') + '</div></div>'
+    + '<div id="sug" aria-live="polite">' + sugHTML() + '</div>' + f('contratista', 'Contratista (quien te pasa el trabajo)') + '<label for="casa_tipo">Tipo de trabajo</label><select id="casa_tipo" data-f="casa">' + sel(TIPOS, 'tipo') + '</select>'
+    + '<label for="casa_fecha">Fecha y hora para llegar</label><input id="casa_fecha" data-f="casa" type="datetime-local" value="' + v('fecha') + '">'
+    + f('notas', 'Instrucciones para la cuadrilla (opcional)') + '<label for="casa_estatus">Estatus</label><select id="casa_estatus" data-f="casa">' + sel(ESTATUS, 'estatus') + '</select>'
+    + '<h2>Quién va</h2><label style="display:flex;align-items:center;gap:12px;min-height:48px;font-weight:600"><input type="checkbox" data-todos style="width:26px;height:26px;margin:0;flex:none"' + (c.todos ? ' checked' : '') + '>Toda la cuadrilla</label>';
+  S.team.forEach(n => { h += '<label style="display:flex;align-items:center;gap:12px;min-height:48px;font-weight:600"><input type="checkbox" data-pe="' + esc(n) + '" style="width:26px;height:26px;margin:0;flex:none"' + (c.personas.indexOf(n) >= 0 ? ' checked' : '') + '>' + esc(n) + '</label>'; });
+  h += '<h2>General: lo que se debe hacer</h2><div class="sub">Cada persona verá esta lista y la va marcando. Quita o agrega lo que haga falta.</div>';
+  c.tareas.forEach((t, i) => { h += '<div class="row" style="gap:8px"><input id="ta' + i + '" data-ti="' + i + '" value="' + esc(t) + '" aria-label="Tarea ' + (i + 1) + '"><button class="btn out" type="button" style="width:auto;margin:4px 0 0;min-height:48px;font-size:15px;padding:0 12px" data-deltarea="' + i + '">Quitar</button></div>'; });
+  h += '<button class="btn out" type="button" style="min-height:44px;font-size:15px" data-addtarea>+ Agregar tarea</button><button class="btn out" type="button" style="min-height:44px;font-size:15px" data-sugeridas>Cargar las sugeridas para este tipo</button>'
+    + '<h2>Ubicación y geocerca</h2><div class="sub">La app busca la casa sola en Google Maps cuando escribes la calle con número y la ciudad. También puedes tocar el botón.</div><button class="btn out" type="button" data-geo>Buscar la casa en Google Maps</button>'
+    + '<div class="card" style="padding:8px;margin-top:10px"><div id="map" style="height:300px;border-radius:10px" role="img" aria-label="Mapa para marcar la casa"></div><div class="sub" id="mapmsg">Toca el mapa o arrastra el marcador para ajustar el punto.</div></div>'
+    + '<label for="casa_radio">Radio de la geocerca: <b id="rv">' + (c.radio || 150) + '</b> m</label><input id="casa_radio" data-f="casa" type="range" min="50" max="500" step="10" value="' + (c.radio || 150) + '">'
+    + '<div class="row" style="gap:8px"><div style="flex:1">' + f('lat', 'Latitud', 'inputmode="decimal"') + '</div><div style="flex:1">' + f('lng', 'Longitud', 'inputmode="decimal"') + '</div></div>'
+    + '<button class="btn" type="submit">' + (quien ? 'Guardar y enviar a la cuadrilla' : 'Guardar como borrador') + '</button>' + (quien ? '' : '<div class="sub">Sin personas elegidas, nadie la verá todavía.</div>') + '</form>';
+  return h;
+}
+function vAjustes() {
+  const a = Object.assign({ zona: true, llega: true, termina: false, climaActivo: false, climaMin: 20, climaViento: 25, climaCuadrilla: true, climaOM: false }, S.ajustes || {});
+  const chk = (id, t, on) => '<label style="display:flex;align-items:center;gap:12px;min-height:48px;font-weight:600"><input type="checkbox" id="aj_' + id + '"' + (on ? ' checked' : '') + ' style="width:26px;height:26px;margin:0;flex:none">' + t + '</label>';
+  const op = (arr, v, f) => arr.map(x => '<option value="' + x + '"' + (Number(v) === x ? ' selected' : '') + '>' + f(x) + '</option>').join('');
+  return '<h1>Ajustes</h1><form id="ajf" class="card"><b>Avisos por correo</b><div class="sub">Llegan al correo que está en la hoja Usuarios (columna Correo) de los supervisores y super usuarios.</div>'
+    + chk('zona', 'Cuando alguien llega a la zona de la casa (todavía no marca)', a.zona) + chk('llega', 'Cuando alguien marca Llegué', a.llega) + chk('termina', 'Cuando alguien termina el día', a.termina) + '<button class="btn" type="submit">Guardar avisos</button></form>'
+    + '<form id="cmf" class="card"><b>Avisos de clima</b><div class="sub">La app revisa el pronóstico de las casas del día cada 5 minutos y avisa de lluvia, tormenta, granizo, viento fuerte, nieve o calor extremo.</div>'
+    + chk('cactivo', 'Vigilar el clima y avisar', a.climaActivo)
+    + '<label for="cm_min">Avisar con</label><select id="cm_min">' + op([15, 20], a.climaMin, x => x + ' minutos de anticipación') + '</select>'
+    + '<label for="cm_viento">Viento fuerte desde</label><select id="cm_viento">' + op([20, 25, 30], a.climaViento, x => x + ' mph') + '</select>'
+    + chk('ccuad', 'Avisar por correo también a quien esté en reloj en esa casa', a.climaCuadrilla)
+    + '<label for="cm_key">Llave de Open-Meteo (opcional, de pago)</label><input id="cm_key" type="password" autocomplete="off" autocapitalize="none" placeholder="' + (a.climaOM ? 'Llave guardada · escribe otra para cambiarla' : 'Déjalo vacío si no tienes una') + '">'
+    + (a.climaOM ? '<button class="btn out" type="button" style="min-height:44px;font-size:15px" data-omquitar>Quitar la llave</button>' : '')
+    + '<div class="sub" style="margin-top:8px">Usa el Servicio Nacional de Meteorología de EE. UU. (gratis, solo para direcciones de EE. UU.). Su pronóstico es por hora, así que el aviso sale entre 15 y 20 minutos antes de la hora en que se espera el mal tiempo. Con una llave de Open-Meteo el cálculo es cada 15 minutos; su versión gratis no se puede usar en un negocio. Con la app cerrada o el teléfono bloqueado el aviso llega solo por correo.</div>'
+    + '<button class="btn" type="submit">Guardar clima</button><button class="btn out" type="button" data-probarclima>Probar correo y conexión</button></form>' + pruebaTxt(S.prueba);
+}
+function vEquipo() {
+  let h = '<h1>Equipo</h1>';
+  if (!S.eq.length) h += '<div class="card">No hay personas activas en la hoja Usuarios.</div>';
+  S.eq.forEach(p => {
+    h += '<div class="card"><div class="row"><b>' + esc(p.nombre) + '</b>' + (p.reloj ? '<span class="chip ' + (p.sin ? 'bad' : 'ok') + '">' + (p.sin ? 'Sin salida' : 'En reloj') + '</span>' : '<span class="chip gray">Fuera</span>') + '</div><div class="sub">' + esc(p.rol) + (p.reloj ? ' · ' + esc(p.reloj.dir) + ' · desde ' + esc(p.reloj.desde) : '') + '</div>';
+    if (p.reloj && S.cl && S.cl.usuario === p.usuario) h += '<form id="clf"><label for="cl_salida">Hora de salida</label><input id="cl_salida" data-f="cl" type="datetime-local" value="' + esc(S.cl.salida) + '" required><label for="cl_motivo">Motivo</label><input id="cl_motivo" data-f="cl" value="' + esc(S.cl.motivo) + '" required><button class="btn" type="submit">Cerrar salida</button><button class="btn out" type="button" data-cancel>Cancelar</button></form>';
+    else if (p.reloj) h += '<button class="btn out" style="min-height:44px;font-size:15px" data-close="' + esc(p.usuario) + '">Cerrar salida</button>';
+    h += '</div>';
+  });
+  return h;
+}
+function vUsuarios() {
+  let h = '<h1>Usuarios</h1>';
+  S.uList.forEach(u => {
+    h += '<div class="card"><div class="row"><b>' + esc(u.nombre) + '</b><span class="chip gray">' + esc(u.rol) + '</span></div><div class="sub">Usuario: ' + esc(u.usuario) + (u.activo ? '' : ' · inactivo') + '</div>';
+    h += S.pinFor === u.usuario ? '<form id="pf"><label for="pf_pin">Nuevo PIN (6 dígitos)</label><input id="pf_pin" inputmode="numeric" maxlength="6" pattern="\\d{6}" required><button class="btn" type="submit">Guardar PIN</button><button class="btn out" type="button" data-cancel>Cancelar</button></form>'
+      : '<button class="btn out" style="min-height:44px;font-size:15px" data-pin="' + esc(u.usuario) + '">Nuevo PIN</button>';
+    h += '</div>';
+  });
+  return h + '<h2>Agregar persona</h2><form id="uf" class="card"><label for="uf_nombre">Nombre</label><input id="uf_nombre" required><label for="uf_usuario">Usuario para entrar</label><input id="uf_usuario" autocapitalize="none" required>'
+    + '<label for="uf_rol">Rol</label><select id="uf_rol"><option>Trabajador</option><option>Supervisor</option><option>Super usuario</option></select>'
+    + '<label for="uf_pin">PIN (6 dígitos)</label><input id="uf_pin" inputmode="numeric" maxlength="6" pattern="\\d{6}" required>'
+    + '<label style="display:flex;gap:10px;align-items:center"><input id="uf_gastos" type="checkbox" style="width:24px;min-height:24px;margin:0">Puede llevar sus gastos</label><button class="btn" type="submit">Agregar</button></form>';
+}
+function vGastos() {
+  const g = S.g, sel = (arr, id) => arr.map(c => '<option' + (g[id] === c ? ' selected' : '') + '>' + esc(c) + '</option>').join('');
+  let h = '<h1>Gastos</h1><p class="sub">Es opcional: anota lo que pagaste por tu trabajo. Puedes registrar uno de otro día cambiando la fecha.</p><form id="gf" class="card"><label for="gx">Fecha</label><input id="gx" type="date" max="' + hoy() + '" value="' + esc(g.gx || hoy()) + '" required>'
+    + '<label for="gm">Monto ($)</label><input id="gm" inputmode="decimal" value="' + esc(g.gm || '') + '" required>'
+    + '<label for="gc">Categoría</label><select id="gc">' + sel(CATS, 'gc') + '</select><label for="gp">Pagado con</label><select id="gp">' + sel(METODOS, 'gp') + '</select>'
+    + '<label for="gj">Casa (opcional)</label><select id="gj"><option value="">Sin casa</option>' + S.jobs.map(x => '<option value="' + esc(x.id) + '"' + (g.gj === x.id ? ' selected' : '') + '>' + esc(x.dir) + '</option>').join('') + '</select>'
+    + '<label for="gd">Descripción</label><input id="gd" value="' + esc(g.gd || '') + '">'
+    + '<button class="btn out" type="button" data-rec>' + (S.recibo ? 'Recibo listo ✓ (cambiar)' : 'Foto del recibo') + '</button><button class="btn" type="submit">Guardar gasto</button></form>';
+  h += '<h2>Mis gastos del mes</h2>';
+  if (!S.gastos.length) h += '<div class="card">Todavía no hay gastos este mes.</div>';
+  S.gastos.forEach(x => { h += '<div class="card row"><div><b>' + esc(x.fecha) + ' · ' + esc(x.categoria) + '</b><div class="sub">' + esc(x.descripcion) + '</div></div><span class="num">$' + Number(x.monto).toFixed(2) + '</span></div>'; });
+  if (S.gastos.length) h += '<div class="card row"><b>Total del mes</b><span class="num">$' + Number(S.gtot).toFixed(2) + '</span></div>';
+  return h;
+}
+function vHours() {
+  let tot = 0, h = '<h1>Mis horas</h1>';
+  if (!S.hours.length) h += '<div class="card">Todavía no hay horas cerradas esta semana.</div>';
+  S.hours.forEach(r => {
+    tot += Number(r.horas) || 0;
+    h += '<div class="card row"><div><b>' + esc(r.fecha) + '</b>' + (r.nota ? ' <span class="chip warn">' + (String(r.nota).indexOf('Manual') === 0 ? 'Manual' : 'Corregida') + '</span>' : '') + '<div class="sub">' + esc(r.dir) + '</div><div class="sub">Real ' + esc(r.entrada) + ' a ' + esc(r.salida) + '<br>Redondeada ' + esc(r.entradaR) + ' a ' + esc(r.salidaR) + '</div></div><div class="num">' + (Number(r.horas) || 0).toFixed(2) + ' h</div></div>';
+  });
+  if (S.hours.length) h += '<div class="card row"><b>Total de la semana</b><span class="num">' + tot.toFixed(2) + ' h</span></div>';
+  const m = S.man;
+  return h + '<h2>Agregar horas manualmente</h2><form id="mf" class="card"><div class="sub">Úsalo si olvidaste marcar. Queda como manual para que tu supervisor lo vea.</div>'
+    + '<label for="man_fecha">Fecha</label><input id="man_fecha" data-f="man" type="date" max="' + hoy() + '" value="' + esc(m.fecha || hoy()) + '" required>'
+    + '<label for="man_trabajo">Casa</label><select id="man_trabajo" data-f="man">' + S.jobs.map(x => '<option value="' + esc(x.id) + '"' + (m.trabajo === x.id ? ' selected' : '') + '>' + esc(x.dir) + '</option>').join('') + '</select>'
+    + '<div class="row" style="gap:8px"><div style="flex:1"><label for="man_entrada">Entrada</label><input id="man_entrada" data-f="man" type="time" value="' + esc(m.entrada || '') + '" required></div><div style="flex:1"><label for="man_salida">Salida</label><input id="man_salida" data-f="man" type="time" value="' + esc(m.salida || '') + '" required></div></div>'
+    + '<label for="man_motivo">Motivo</label><input id="man_motivo" data-f="man" value="' + esc(m.motivo || '') + '" required><button class="btn" type="submit">Guardar horas</button></form>';
+}
+async function loadJobs() {
+  const j = await api('trabajos');
+  if (!j.ok) throw new Error('No pude cargar tus trabajos.');
+  S.jobs = j.jobs; S.clock = j.clock; S.avisos = j.avisos || []; S.view = 'home';
+  setTimeout(checkZona, 0);
+}
+async function checkZona() {
+  if (isAdmin() || S.clock || !S.token || !S.jobs.length || !navigator.geolocation || S.view === 'login' || S.view === 'setup') return;
+  let pos; try { pos = await getPos(); } catch (e) { return; }
+  const c = S.jobs.filter(j => j.lat !== '' && j.lat != null).map(j => ({ j, d: meters(pos.lat, pos.lng, j.lat, j.lng) })).filter(x => x.d <= x.j.radio).sort((a, b) => a.d - b.d)[0];
+  const antes = JSON.stringify(S.zona);
+  S.zona = c ? { id: c.j.id, dir: c.j.dir } : null;
+  if (c) { const k = 'rl_z_' + c.j.id + '_' + hoy(); if (!localStorage.getItem(k)) { try { const r = await api('enZona', { trabajo: c.j.id, lat: pos.lat, lng: pos.lng }); if (r.ok) localStorage.setItem(k, '1'); } catch (e) { } } }
+  if (antes !== JSON.stringify(S.zona) && !S.busy) render();
+}
+async function run(fn) {
+  if (S.busy) return; S.busy = true; render();
+  try { await fn(); } catch (e) { say(e.message, 'bad'); }
+  S.busy = false; render();
+}
+function chipFor(e) { return '<span class="chip ' + (e === 'En proceso' ? 'blue' : 'gray') + '">' + esc(e) + '</span>'; }
+const tareasProg = j => { const t = j.tareas || [], d = t.filter(x => x.hecha).length; return { t: t.length, d }; };
+
+function vSetup() {
+  return '<h1>Empezar</h1><div class="card"><b>Probar sin conexión</b><div class="sub">Funciona ya, con una casa de ejemplo. Los datos se quedan solo en este teléfono y las fotos no se guardan.</div><button class="btn" data-demo>Entrar en modo de prueba</button></div>'
+    + '<form id="cf" class="card"><b>Conectar con tu hoja de Google</b><div class="sub">Pega la dirección de tu aplicación web de Apps Script (termina en /exec).</div><label for="url">Dirección</label><input id="url" inputmode="url" autocapitalize="none" placeholder="https://script.google.com/macros/s/…/exec"><button class="btn out" type="submit">Guardar y conectar</button></form>';
+}
+function vLogin() {
+  return '<h1>Entrar</h1><form id="f" class="card"><label for="u">Usuario</label><input id="u" autocomplete="username" autocapitalize="none" required>'
+    + '<label for="p">PIN</label><input id="p" type="password" inputmode="numeric" autocomplete="current-password" required>'
+    + '<button class="btn" type="submit">Entrar</button></form><p class="sub">' + (MODE() === 'demo' ? 'Modo de prueba: usuario <b>demo</b>, PIN <b>1234</b>. Los datos se quedan en este teléfono.' : 'Cada persona entra con su propio usuario y PIN.') + '</p><button class="btn out" style="min-height:44px;font-size:15px" data-conn>Cambiar conexión</button>';
+}
+function zonaBanner() {
+  const z = S.zona;
+  if (!z || S.clock) return '';
+  return '<div class="msg ok" role="status"><b>Ya estás en ' + esc(z.dir) + '.</b><br>Puedes marcar tus horas.<button class="btn" data-clock="llegue" data-job="' + esc(z.id) + '">Llegué</button></div>';
+}
+function vHome() {
+  const c = S.clock && job(S.clock.trabajo);
+  let h = '<h1>Mis trabajos</h1>' + zonaBanner();
+  if (c) h += '<div class="clockbar"><div class="row"><div><b>En reloj</b><div class="sub">' + esc(c.dir) + ' · <span id="el">' + elapsed() + '</span></div></div></div><button class="btn" data-go="' + esc(c.id) + '">Abrir · fotos y tareas</button></div>';
+  if (!S.jobs.length) h += '<div class="card">No tienes trabajos asignados todavía. Cuando tu supervisor te mande uno, aparece aquí.</div>';
+  S.jobs.forEach(j => {
+    const p = tareasProg(j);
+    h += '<div class="card"><button style="width:100%;text-align:left;font:inherit;min-height:0;background:none;border:0;padding:0;color:inherit;letter-spacing:normal" data-go="' + esc(j.id) + '"><div class="row"><b style="font:700 19px Oswald,sans-serif">' + esc(j.dir) + '</b>' + chipFor(j.estatus) + '</div>'
+      + '<div class="sub">' + esc([fechaTxt(j.fecha), j.tipo].filter(Boolean).join(' · ')) + '</div>' + (j.notas ? '<div class="sub">' + esc(j.notas) + '</div>' : '')
+      + (p.t ? '<div class="row" style="margin-top:8px;font-size:14px"><span>Lo que se debe hacer</span><b>' + p.d + ' de ' + p.t + '</b></div><div class="bar"><i style="width:' + pct(p.d, p.t) + '%"></i></div>' : '')
+      + '<div class="sub" style="margin-top:6px">Fotos: antes ' + j.fotos.antes + ' · después ' + j.fotos.despues + '</div></button>' + accionesDir(j, j.id) + '</div>';
+  });
+  return h;
+}
+function vJob() {
+  const j = job(S.job), mine = S.clock && S.clock.trabajo === j.id, other = S.clock && !mine;
+  let h = '<button class="btn out" style="margin:0 0 8px;min-height:44px;font-size:15px" data-back>‹ Mis trabajos</button><h1>' + esc(j.dir) + '</h1><div class="sub">' + esc([j.tipo, j.estatus, fechaTxt(j.fecha)].filter(Boolean).join(' · ')) + '</div>';
+  h += '<div class="card"><b>Ubicación</b><div class="addr">' + esc(dirTexto(j)) + '</div>' + accionesDir(j, j.id) + '<div class="sub" style="margin-top:8px">' + (S.gps ? esc(S.gps) : 'Toca Llegué para validar que estás en la zona.') + '</div>';
+  if (!mine && !other) h += '<button class="btn" data-clock="llegue" data-job="' + esc(j.id) + '">Llegué</button>';
+  if (mine) h += '<div class="num" style="margin-top:8px"><span id="el">' + elapsed() + '</span></div><button class="btn out" data-clock="terminado" data-job="' + esc(j.id) + '">Día terminado</button>';
+  if (other) h += '<div class="msg">Ya estás en reloj en otra casa. Termina ese día primero.</div>';
+  h += '</div>';
+  if (j.notas) h += '<div class="card"><b>Instrucciones</b><div>' + esc(j.notas) + '</div></div>';
+  h += climaCard(j.id);
+  h += '<h2>General</h2><div class="card"><b>Lo que se debe hacer</b>';
+  if (!j.tareas.length) h += '<div class="sub">Tu supervisor no puso una lista para este trabajo.</div>';
+  j.tareas.forEach((t, i) => { h += '<label style="display:flex;align-items:center;gap:12px;min-height:48px;font-weight:600"><input type="checkbox" style="width:26px;height:26px;margin:0;flex:none" data-tarea="' + i + '"' + (t.hecha ? ' checked' : '') + '>' + esc(t.tarea) + '</label>'; });
+  return h + '</div><div class="card"><b>Fotos</b><div class="sub">Solo elige Antes o Después. La app las ordena sola en la nube.</div><div class="row" style="gap:10px"><button class="btn" style="flex:1" data-shot="Antes"' + (S.busy ? ' disabled' : '') + '>Antes (' + j.fotos.antes + ')</button><button class="btn" style="flex:1" data-shot="Después"' + (S.busy ? ' disabled' : '') + '>Después (' + j.fotos.despues + ')</button></div></div>';
+}
+function vReloj() {
+  const c = S.clock && job(S.clock.trabajo);
+  let h = '<h1>Reloj</h1>';
+  if (c) return h + '<div class="card" style="text-align:center"><div class="sub">En reloj</div><div class="num" style="font-size:56px;line-height:1.1"><span id="el">' + elapsed() + '</span></div><div class="sub">' + esc(c.dir) + '</div>'
+    + '<div class="sub">Entrada ' + hm(S.clock.entrada) + ' · redondeada ' + hm(r15(S.clock.entrada)) + '</div>'
+    + '<button class="btn" data-clock="terminado" data-job="' + esc(c.id) + '">Día terminado</button><button class="btn out" data-go="' + esc(c.id) + '">Fotos y tareas</button></div>' + climaCard(c.id) + (S.gps ? '<div class="sub" style="margin-top:8px">' + esc(S.gps) + '</div>' : '');
+  h += zonaBanner();
+  if (!S.jobs.length) return h + '<div class="card">No tienes trabajos asignados todavía.</div>';
+  h += '<div class="sub">¿A qué casa llegaste?</div>';
+  S.jobs.forEach(j => { h += '<div class="card"><b style="font:700 19px Oswald,sans-serif">' + esc(j.dir) + '</b><div class="sub">' + esc([fechaTxt(j.fecha), j.tipo].filter(Boolean).join(' · ')) + '</div>' + accionesDir(j, j.id) + '<button class="btn" data-clock="llegue" data-job="' + esc(j.id) + '">Llegué</button></div>'; });
+  return h + (S.gps ? '<div class="sub" style="margin-top:8px">' + esc(S.gps) + '</div>' : '');
+}
+function render() {
+  $('#out').hidden = !S.token; $('#mode').hidden = MODE() !== 'demo';
+  const inApp = S.view !== 'login' && S.view !== 'setup';
+  let h = '';
+  if (S.msg) h += '<div class="msg ' + S.msg.k + '" role="status">' + esc(S.msg.t) + '</div>';
+  if (inApp) h += avisosBanner();
+  if (S.view === 'setup') h += vSetup();
+  else if (S.view === 'login') h += vLogin();
+  else if (isAdmin()) h += S.tab === 'panel' ? vPanel() : S.tab === 'casas' ? (S.casa ? vCasaForm() : vCasas()) : S.tab === 'equipo' ? vEquipo() : S.tab === 'ajustes' ? vAjustes() : vUsuarios();
+  else h += S.tab === 'horas' ? vHours() : S.tab === 'reloj' ? vReloj() : S.tab === 'gastos' ? vGastos() : S.view === 'job' ? vJob() : vHome();
+  $('#app').innerHTML = h;
+  const nav = $('#nav'); nav.hidden = !inApp;
+  if (inApp) nav.innerHTML = (isAdmin() ? ATABS.filter(t => (t[0] !== 'usuarios' && t[0] !== 'ajustes') || isSuper()) : TABS.filter(t => t[0] !== 'gastos' || (S.user && S.user.gastos))).map(t => '<button data-tab="' + t[0] + '" aria-current="' + (S.tab === t[0]) + '">' + t[1] + '</button>').join('');
+  if (S.busy) $('#app').setAttribute('aria-busy', 'true'); else $('#app').removeAttribute('aria-busy');
+  afterRender();
+}
+
+document.addEventListener('submit', e => {
+  e.preventDefault();
+  if (e.target.id === 'cf') {
+    const u = $('#url').value.trim();
+    if (!/^https:\/\/script\.google\.com\/.+\/exec$/.test(u)) { say('Esa dirección no parece de Apps Script. Debe empezar con https://script.google.com y terminar en /exec.', 'bad'); return render(); }
+    localStorage.setItem('rl_api', u); localStorage.setItem('rl_mode', 'live'); say('Conectado. Ahora entra con tu usuario y PIN.', 'ok'); S.view = 'login'; return render();
+  }
+  if (e.target.id === 'gf') {
+    const v = id => $('#' + id).value, monto = parseFloat(v('gm').replace(',', '.'));
+    const P = { fecha: v('gx'), trabajo: v('gj'), categoria: v('gc'), metodo: v('gp'), descripcion: v('gd'), monto, img: S.recibo || '' };
+    say(null);
+    run(async () => {
+      const r = await api('gasto', P);
+      if (!r.ok) throw new Error(r.error === 'monto' ? 'Escribe un monto mayor que cero.' : 'No se pudo guardar el gasto.');
+      S.recibo = null; S.g = {}; say('Gasto guardado.', 'ok'); await loadGastos();
+    });
+    return;
+  }
+  const id = e.target.id, val = i => $('#' + i).value;
+  if (id === 'mf') {
+    const P = { fecha: val('man_fecha'), trabajo: val('man_trabajo'), entrada: val('man_entrada'), salida: val('man_salida'), motivo: val('man_motivo') };
+    say(null);
+    run(async () => {
+      const r = await api('horaManual', P);
+      if (!r.ok) throw new Error({ motivo: 'Escribe el motivo.', hora: 'La salida debe ser después de la entrada (máximo 16 horas).', fecha: 'Solo se pueden agregar horas de los últimos 14 días y no del futuro.', trabajo: 'Elige la casa.', datos: 'Revisa la fecha y las horas.' }[r.error] || 'No se pudieron guardar las horas.');
+      S.man = {}; const j = await api('horas'); S.hours = j.horas || []; say('Horas guardadas. Quedaron marcadas como manuales.', 'ok');
+    });
+    return;
+  }
+  if (id === 'casaf') {
+    say(null); const c = S.casa;
+    const P = { id: c.id, dir: c.dir, ciudad: c.ciudad, estado: c.estado, cp: c.cp, contratista: c.contratista, cliente: c.cliente, tipo: c.tipo, estatus: c.estatus, lat: c.lat, lng: c.lng, radio: Number(c.radio) || 150, fecha: c.fecha || '', notas: c.notas || '', personas: c.personas, todos: !!c.todos, tareas: c.tareas };
+    run(async () => {
+      const r = await api('guardarCasa', P);
+      if (!r.ok) throw new Error({ dir: 'Escribe la dirección.', coords: 'La latitud y la longitud deben ir juntas y ser números válidos.', trabajo: 'Ese trabajo ya no existe.' }[r.error] || 'No se pudo guardar el trabajo.');
+      c.id = r.id; await loadCasas();
+      if (r.ubicacion === 'google') { c.lat = r.lat; c.lng = r.lng; c.manual = false; }
+      const aviso = c.todos || c.personas.length ? 'Guardado y enviado a ' + (c.todos ? 'toda la cuadrilla' : c.personas.join(', ')) + '. Lo verán al abrir la app.' : 'Guardado como borrador: nadie de la cuadrilla lo ve todavía.';
+      const sinPunto = c.lat === '' || c.lat == null;
+      say(r.ubicacion === 'google' ? aviso + ' La casa se ubicó sola en Google Maps.' : sinPunto ? aviso + ' Falta la ubicación en el mapa: busca la casa con el botón o tócala en el mapa. Sin ella no se valida el Llegué.' : aviso, sinPunto ? '' : 'ok');
+    });
+    return;
+  }
+  if (id === 'ajf') {
+    const P = { zona: $('#aj_zona').checked, llega: $('#aj_llega').checked, termina: $('#aj_termina').checked };
+    say(null);
+    run(async () => { const r = await api('guardarAjustes', P); if (!r.ok) throw new Error('No se pudieron guardar los avisos.'); S.ajustes = r.ajustes; say('Avisos guardados.', 'ok'); });
+    return;
+  }
+  if (id === 'cmf') {
+    const P = { climaActivo: $('#aj_cactivo').checked, climaMin: Number($('#cm_min').value), climaViento: Number($('#cm_viento').value), climaCuadrilla: $('#aj_ccuad').checked };
+    const k = $('#cm_key').value.trim(); if (k) P.omKey = k;
+    say(null);
+    run(async () => {
+      const r = await api('guardarAjustes', P);
+      if (!r.ok) {
+        try { await loadAjustes(); } catch (e2) { }
+        throw new Error({ trigger: 'Google no dejó programar la vigilancia. En Apps Script ejecuta la función autorizar() una vez, crea una versión nueva de la implementación y vuelve a intentar.', llave: 'Esa llave no parece válida. Revisa que la copiaste completa.', permiso: 'Solo el super usuario puede cambiar esto.' }[r.error] || 'No se pudo guardar el clima.');
+      }
+      S.ajustes = r.ajustes; say(r.ajustes.climaActivo ? 'Clima guardado. La vigilancia está activa.' : 'Clima guardado. La vigilancia está apagada.', 'ok');
+    });
+    return;
+  }
+  if (id === 'clf') {
+    const P = { usuario: S.cl.usuario, salida: new Date(val('cl_salida')).getTime(), motivo: val('cl_motivo') };
+    say(null);
+    run(async () => {
+      const r = await api('cerrarReloj', P);
+      if (!r.ok) throw new Error({ motivo: 'Escribe el motivo.', hora: 'La salida debe ser después de la entrada y no del futuro.', noclock: 'Esa persona ya no tiene un reloj abierto.' }[r.error] || 'No se pudo cerrar la salida.');
+      S.cl = null; await loadEquipo(); say('Salida cerrada y registrada con su motivo.', 'ok');
+    });
+    return;
+  }
+  if (id === 'uf') {
+    const P = { nombre: val('uf_nombre'), usuario: val('uf_usuario'), rol: val('uf_rol'), pin: val('uf_pin'), gastos: $('#uf_gastos').checked };
+    say(null);
+    run(async () => {
+      const r = await api('crearUsuario', P);
+      if (!r.ok) throw new Error({ repetido: 'Ese usuario ya existe.', pin: 'El PIN debe tener exactamente 6 números.', datos: 'Escribe el nombre y un usuario de 3 a 30 letras, números, punto o guion.', rol: 'Elige un rol.' }[r.error] || 'No se pudo agregar a la persona.');
+      await loadUsuarios(); say('Persona agregada. Ya puede entrar con su usuario y PIN.', 'ok');
+    });
+    return;
+  }
+  if (id === 'pf') {
+    const P = { usuario: S.pinFor, pin: val('pf_pin') };
+    say(null);
+    run(async () => {
+      const r = await api('nuevoPin', P);
+      if (!r.ok) throw new Error(r.error === 'pin' ? 'El PIN debe tener exactamente 6 números.' : 'No se pudo cambiar el PIN.');
+      S.pinFor = null; say('PIN cambiado. El anterior ya no sirve.', 'ok');
+    });
+    return;
+  }
+  const usuario = $('#u').value, pin = $('#p').value, device = /iPhone|iPad/.test(navigator.userAgent) ? 'iPhone' : /Android/.test(navigator.userAgent) ? 'Android' : 'Computadora';
+  say(null);
+  run(async () => {
+    const j = await api('login', { usuario, pin, device });
+    if (!j.ok) throw new Error(j.error === 'bloqueado' ? 'Demasiados intentos. Espera 15 minutos.' : 'Usuario o PIN incorrecto.');
+    S.token = j.token; S.user = { nombre: j.nombre, rol: j.rol, gastos: !!j.gastos };
+    localStorage.setItem('rl_token', j.token); localStorage.setItem('rl_user', JSON.stringify(S.user));
+    S.tab = isAdmin() ? 'panel' : 'trabajos';
+    await (isAdmin() ? loadPanel() : loadJobs());
+  });
+});
+document.addEventListener('click', e => {
+  const t = e.target.closest('button'); if (!t) return;
+  const d = t.dataset;
+  if (t.hasAttribute('data-demo')) { localStorage.setItem('rl_mode', 'demo'); S.view = 'login'; say(null); return render(); }
+  if (t.hasAttribute('data-conn')) { ['rl_mode', 'rl_api'].forEach(k => localStorage.removeItem(k)); logout(); S.view = 'setup'; say(null); return render(); }
+  if (t.id === 'out') { say(null); logout(); return render(); }
+  if (d.tab) {
+    S.tab = d.tab; say(null); S.casa = null; S.bus = null; S.cl = null; S.pinFor = null; S.prueba = null;
+    if (isAdmin()) return run(S.tab === 'panel' ? loadPanel : S.tab === 'casas' ? loadCasas : S.tab === 'equipo' ? loadEquipo : S.tab === 'ajustes' ? loadAjustes : loadUsuarios);
+    if (S.tab === 'horas') return run(async () => { const j = await api('horas'); S.hours = j.horas || []; if (!S.jobs.length) await loadJobs(); });
+    if (S.tab === 'gastos') return run(loadGastos);
+    if (S.tab === 'trabajos') S.view = 'home';
+    if (S.tab === 'reloj') return run(async () => { await loadJobs(); if (S.clock) loadClima(S.clock.trabajo); });
+    return run(loadJobs);
+  }
+  if (t.hasAttribute('data-cancel')) { S.casa = null; S.bus = null; S.cl = null; S.pinFor = null; say(null); return render(); }
+  if (t.hasAttribute('data-newcasa')) { S.tipoPrev = TIPOS[0]; S.casa = { id: '', dir: '', ciudad: '', estado: '', cp: '', contratista: '', cliente: '', tipo: TIPOS[0], estatus: 'Pendiente', lat: '', lng: '', manual: false, radio: 150, fecha: '', notas: '', personas: [], todos: false, tareas: TAREAS_BASE[TIPOS[0]].slice() }; S.bus = null; S.put = null; say(null); return render(); }
+  if (d.casa) { const c = S.casas.find(x => x.id === d.casa); S.tipoPrev = c.tipo; S.bus = null; S.put = null; S.casa = Object.assign({}, c, { manual: tieneXY(c), personas: (c.personas || []).slice(), todos: !!c.todos, tareas: (c.tareas || []).map(x => x.tarea), fecha: c.fecha || '', notas: c.notas || '' }); say(null); return render(); }
+  if (t.hasAttribute('data-geo')) { buscarCasa(false); return; }
+  if (d.sug !== undefined) { const m = S.bus && S.bus.res && S.bus.res[Number(d.sug)]; if (m) { aplicarResultado(m, true); S.bus.aplicada = Number(d.sug); pintaSug(); } return; }
+  if (t.hasAttribute('data-ubicar')) return run(async () => {
+    const r = await api('ubicarFaltantes');
+    if (!r.ok) throw new Error(r.error === 'demo' ? 'En el modo de prueba no se conecta con Google Maps. Abre la casa y usa "Buscar la casa en Google Maps".' : r.error === 'accion' ? 'Falta actualizar el servidor de Google (pega el Code.gs nuevo y crea una versión nueva).' : 'No se pudo ubicar las casas.');
+    await loadCasas();
+    const n = r.ubicadas || 0, sin = r.sinResultado || 0;
+    if (r.servicio === 'cupo') return say('Google Maps llegó al límite de búsquedas de hoy' + (n ? ' (ubiqué ' + n + ' antes de llegar)' : '') + '. Intenta mañana o marca las casas a mano.', 'bad');
+    if (r.servicio === 'servicio') return say('No pude conectar con Google Maps. En Apps Script ejecuta autorizar() una vez, crea una versión nueva de la implementación y vuelve a intentar.', 'bad');
+    say((n ? 'Ubiqué ' + n + (n === 1 ? ' casa' : ' casas') + ' en Google Maps.' : 'No pude ubicar ninguna casa.') + (sin ? ' ' + sin + (sin === 1 ? ' no se pudo' : ' no se pudieron') + ': ábrelas, revisa la dirección y márcalas en el mapa.' : '') + (r.restan ? ' Quedan ' + r.restan + ': toca otra vez.' : ''), n ? 'ok' : '');
+  });
+  if (t.hasAttribute('data-addtarea')) { S.casa.tareas.push(''); return render(); }
+  if (d.deltarea !== undefined) { S.casa.tareas.splice(Number(d.deltarea), 1); return render(); }
+  if (t.hasAttribute('data-sugeridas')) { S.casa.tareas = (TAREAS_BASE[S.casa.tipo] || []).slice(); return render(); }
+  if (d.copy) {
+    const j = jobPorId(d.copy);
+    if (!j || !String(j.dir || '').trim()) { toast('Escribe la dirección primero.'); return; }
+    copiar(dirTexto(j)).then(ok => toast(ok ? 'Dirección copiada. Pégala en tu app de mapas.' : 'No pude copiarla. Mantén presionada la dirección para copiarla.'));
+    return;
+  }
+  if (d.nav) {
+    const j = jobPorId(d.nav);
+    if (!j || !String(j.dir || '').trim()) { toast('Escribe la dirección primero.'); return; }
+    window.open(navUrl(j), '_blank', 'noopener'); return;
+  }
+  if (d.ack) { S.ack.push(d.ack); S.ack = S.ack.slice(-60); try { localStorage.setItem('rl_ack', JSON.stringify(S.ack)); } catch (e) { } return render(); }
+  if (d.clima) { loadClima(d.clima, true); return; }
+  if (t.hasAttribute('data-probarclima')) return run(async () => {
+    const r = await api('probarClima');
+    if (!r.ok) throw new Error(r.error === 'permiso' ? 'Solo el super usuario puede hacer la prueba.' : 'No se pudo hacer la prueba.');
+    S.prueba = r; say(null);
+  });
+  if (t.hasAttribute('data-omquitar')) return run(async () => { const r = await api('guardarAjustes', { omQuitar: true }); if (!r.ok) throw new Error('No se pudo quitar la llave.'); S.ajustes = r.ajustes; say('Llave quitada.', 'ok'); });
+  if (d.close) { S.cl = { usuario: d.close, salida: ahoraLocal(), motivo: '' }; say(null); return render(); }
+  if (d.pin) { S.pinFor = d.pin; say(null); return render(); }
+  if (d.go) { S.job = d.go; S.view = 'job'; S.tab = 'trabajos'; S.gps = ''; say(null); render(); loadClima(d.go); return; }
+  if (t.hasAttribute('data-back')) { S.view = 'home'; say(null); return run(loadJobs); }
+  if (t.hasAttribute('data-rec')) return $('#rec').click();
+  if (d.shot) { S.etapa = d.shot; return $('#cam').click(); }
+  if (d.clock) {
+    const j = job(d.job || S.job), tipo = d.clock; say(null);
+    run(async () => {
+      let pos = {}; const hasXY = j.lat !== '' && j.lng !== '' && j.lat != null;
+      if (hasXY && tipo === 'llegue') { pos = await getPos(); S.dist = Math.round(meters(pos.lat, pos.lng, j.lat, j.lng)); S.gps = 'Estás a ' + S.dist + ' m de la casa (radio ' + j.radio + ' m).'; }
+      else { try { pos = await getPos(); } catch (e) { pos = {}; } if (!hasXY) S.gps = 'Esta casa aún no tiene coordenadas: no se valida la ubicación.'; }
+      const r = await api('clock', { trabajo: j.id, tipo, lat: pos.lat, lng: pos.lng, acc: pos.acc });
+      if (!r.ok) throw new Error(r.error === 'fuera' ? 'Estás a ' + r.dist + ' m. Acércate a la casa para marcar Llegué.' : r.error === 'ya' ? 'Ya estás en reloj.' : r.error === 'noclock' ? 'No tienes una entrada abierta.' : 'No se pudo marcar. Intenta otra vez.');
+      S.clock = tipo === 'llegue' ? { trabajo: j.id, entrada: r.entrada } : null; S.zona = null;
+      say(tipo === 'llegue' ? 'Llegada marcada. Ya estás en reloj.' : 'Día terminado. Tus horas quedaron registradas.', 'ok');
+    });
+  }
+});
+const shrink = f => new Promise((ok, no) => { const im = new Image(), u = URL.createObjectURL(f); im.onload = () => { const k = Math.min(1, 1600 / Math.max(im.width, im.height)), c = document.createElement('canvas'); c.width = Math.round(im.width * k); c.height = Math.round(im.height * k); c.getContext('2d').drawImage(im, 0, 0, c.width, c.height); URL.revokeObjectURL(u); ok(c.toDataURL('image/jpeg', .72)); }; im.onerror = () => no(new Error('No pude leer la foto.')); im.src = u; });
+$('#rec').addEventListener('change', async e => { const f = e.target.files[0]; e.target.value = ''; if (!f) return; try { S.recibo = await shrink(f); say('Recibo listo.', 'ok'); } catch (err) { say(err.message, 'bad'); } render(); });
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.closest && t.closest('#gf')) S.g[t.id] = t.value;
+  if (t.dataset && t.dataset.f) {
+    const k = t.id.slice(t.id.indexOf('_') + 1); S[t.dataset.f][k] = t.value;
+    if (t.dataset.f === 'casa') {
+      if (k === 'dir' || k === 'ciudad' || k === 'estado' || k === 'cp') buscarAuto();
+      if (k === 'radio') { if ($('#rv')) $('#rv').textContent = t.value; if (S.ci) S.ci.setRadius(Number(t.value)); }
+      if ((k === 'lat' || k === 'lng') && S.put) { const la = parseFloat(S.casa.lat), ln = parseFloat(S.casa.lng); if (!isNaN(la) && !isNaN(ln)) S.put({ lat: la, lng: ln }, true); }
+      if (k === 'tipo') {
+        const viejo = S.tipoPrev || TIPOS[0], cambia = !S.casa.tareas.length || S.casa.tareas.join('|') === (TAREAS_BASE[viejo] || []).join('|');
+        S.tipoPrev = t.value;
+        if (cambia) { S.casa.tareas = (TAREAS_BASE[t.value] || []).slice(); render(); }
+      }
+    }
+  }
+  if (t.dataset && t.dataset.ti !== undefined) S.casa.tareas[Number(t.dataset.ti)] = t.value;
+});
+document.addEventListener('change', e => {
+  const t = e.target, d = t.dataset || {};
+  if (d.pe !== undefined && S.casa) { const i = S.casa.personas.indexOf(d.pe); if (t.checked && i < 0) S.casa.personas.push(d.pe); if (!t.checked && i >= 0) S.casa.personas.splice(i, 1); render(); }
+  if (d.todos !== undefined && S.casa) { S.casa.todos = t.checked; render(); }
+  if (d.tarea !== undefined) {
+    const j = job(S.job), i = Number(d.tarea), v = t.checked, ta = j.tareas[i]; ta.hecha = v;
+    run(async () => { const r = await api('tarea', { trabajo: j.id, tarea: ta.tarea, hecha: v }); if (!r.ok) { ta.hecha = !v; throw new Error('No se pudo guardar la tarea.'); } });
+  }
+});
+$('#cam').addEventListener('change', async e => {
+  const f = e.target.files[0]; e.target.value = ''; if (!f) return;
+  const j = job(S.job), etapa = S.etapa;
+  run(async () => {
+    const img = await shrink(f);
+    const r = await api('foto', { trabajo: j.id, etapa, img });
+    if (!r.ok) throw new Error('No se pudo guardar la foto. Intenta otra vez.');
+    if (etapa === 'Antes') j.fotos.antes++; else j.fotos.despues++;
+    say('Foto de ' + etapa.toLowerCase() + ' guardada.', 'ok');
+  });
+});
+setInterval(() => { const el = $('#el'); if (el) el.textContent = elapsed(); }, 30000);
+setInterval(() => { if (document.visibilityState === 'visible' && S.token && !S.busy && S.view === 'home') checkZona(); }, 60000);
+setInterval(async () => {
+  if (!(S.token && isAdmin() && S.tab === 'panel' && S.view === 'home' && !S.busy && document.visibilityState === 'visible')) return;
+  try {
+    const j = await api('panel'); if (!j.ok) return;
+    const antes = S.panel ? (S.panel.eventos || []).length : 0, cambio = JSON.stringify([j.relojes, j.eventos, j.avisos]) !== JSON.stringify(S.panel ? [S.panel.relojes, S.panel.eventos, S.panel.avisos] : null);
+    const nuevoAv = setAvisos(j.avisos);
+    S.panel = j;
+    if ((j.eventos || []).length > antes && antes >= 0 && cambio) { const e = j.eventos[0]; say(e.nombre + ' ' + txtEv(e.tipo) + ' ' + e.dir, 'ok'); if (navigator.vibrate) navigator.vibrate(200); }
+    if (nuevoAv && navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 200]);
+    if (cambio) render();
+  } catch (e) { }
+}, 45000);
+// Los trabajadores revisan los avisos de clima cada minuto mientras la app está abierta.
+setInterval(async () => {
+  if (!(S.token && !isAdmin() && !S.busy && document.visibilityState === 'visible' && (S.view === 'home' || S.view === 'job'))) return;
+  try {
+    const j = await api('avisos'); if (!j.ok) return;
+    const antes = JSON.stringify(S.avisos), nuevo = setAvisos(j.avisos);
+    if (nuevo && navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 200]);
+    if (antes !== JSON.stringify(S.avisos) && !S.busy) {
+      const a = document.activeElement;
+      if (a && /^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName)) { if (nuevo) toast('Aviso de clima: ' + j.avisos[0].texto); } else render();
+    }
+  } catch (e) { }
+}, 60000);
+(async () => {
+  if (S.token) { try { S.tab = isAdmin() ? 'panel' : 'trabajos'; await (isAdmin() ? loadPanel() : loadJobs()); } catch (e) { say(e.message, 'bad'); S.view = S.token ? 'home' : 'login'; } }
+  render();
+})();
+</script>
+</body>
+</html>
